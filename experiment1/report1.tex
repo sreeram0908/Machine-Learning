@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\title{Experiment 1: Working with Python Packages – Numpy, Scipy, Scikit-Learn, Matplotlib}
+\author{Sreeram GM}
+
+\begin{document}
+
+\maketitle
+
+\section*{Sri Sivasubramaniya Nadar College of Engineering, Chennai}
+(An autonomous institution affiliated to Anna University)
+
+\subsection*{Subject Code \& Name: ICS1512 – Machine Learning Algorithms Laboratory}
+
+\subsection*{Academic Year: 2025–2026 (Odd)}
+
+\subsection*{Batch: 2023–2028}
+
+\subsection*{Due Date: 12.07.2025}
+
+\section{Aim}
+To familiarize with essential Python libraries and explore their functionalities for tasks such as array operations, data preprocessing, numerical computing, machine learning workflows, and data visualization.
+
+\section{Libraries Used}
+\begin{itemize}
+    \item NumPy
+    \item Pandas
+    \item Matplotlib
+    \item Scikit-Learn
+    \item Seaborn
+\end{itemize}
+
+\section{Mathematical / Theoretical Overview}
+This experiment focuses on key preprocessing and analytical steps required for efficient machine learning. The major components include:
+
+\begin{enumerate}
+    \item \textbf{Handling Missing Values:} Missing data can bias models or cause failures during training. Columns with missing values were either discarded (if non-essential) or imputed using the mode for categorical attributes to maintain label integrity.
+    
+    \item \textbf{Feature Importance via Word Frequency:} In spam email classification, emails were represented as bag-of-words vectors. Feature relevance was assessed by comparing word frequency across spam and non-spam classes. Rare words were filtered out to retain significant features.
+    
+    \item \textbf{Correlation Analysis:} For numeric datasets (e.g., diabetes, iris), Pearson correlation coefficients were computed between input features and the target variable. Label encoding was applied to categorical targets.
+    
+    \item \textbf{Feature Standardization:} Features often differ in scale. To normalize, Z-score standardization was applied:
+    \[ z = \frac{x - \mu}{\sigma} \]
+    ensuring zero mean and unit variance.
+    
+    \item \textbf{Label Encoding:} For categorical outputs, classes were converted to integers using LabelEncoder, making them compatible with algorithms requiring numeric inputs.
+\end{enumerate}
+
+\section{Dataset and Suitable Algorithms}
+
+\begin{table}[h]
+\centering
+\caption{Datasets and Corresponding Algorithms}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Dataset} & \textbf{Task Type} & \textbf{Suitable Algorithms} \\ \hline
+Iris Dataset & Multi-class Classification & KNN, SVM \\ \hline
+Loan Amount Prediction & Regression & Linear Regression \\ \hline
+Diabetes Prediction & Binary Classification & SVM \\ \hline
+Email Spam Detection & Binary Classification & Logistic Regression, SVM \\ \hline
+Digit Recognition & Multi-class Classification & CNN, SVM \\ \hline
+\end{tabular}
+\label{tab:datasets}
+\end{table}
+
+\subsection*{Results and Discussions}
+\begin{itemize}
+    \item \textbf{Iris Dataset:} Classified flowers into three species using sepal and petal dimensions. KNN and SVM were suitable choices.
+    
+    \item \textbf{Loan Amount Prediction:} Treated as a regression task using Linear Regression.
+    
+    \item \textbf{Diabetes Prediction:} Binary classification using SVM for structured numeric data.
+    
+    \item \textbf{Email Spam Detection:} Used word frequency features, classified with Logistic Regression and SVM.
+    
+    \item \textbf{Digit Recognition:} Implemented CNN for image classification; SVM works well with extracted features.
+\end{itemize}
+
+\section{Learning Outcomes}
+\begin{itemize}
+    \item Applied data cleaning techniques for missing values.
+    \item Performed text analysis using Bag-of-Words for spam detection.
+    \item Conducted feature relevance checks via correlation analysis.
+    \item Standardized numerical features for improved model performance.
+\end{itemize}
+
+\end{document}
